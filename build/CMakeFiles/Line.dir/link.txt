@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLine.a CMakeFiles/Line.dir/src/line.cpp.o
+/usr/bin/ranlib libLine.a
