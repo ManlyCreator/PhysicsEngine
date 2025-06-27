@@ -1,2 +1,0 @@
-/usr/bin/ar qc libIvVector.a CMakeFiles/IvVector.dir/src/IvVector.cpp.o
-/usr/bin/ranlib libIvVector.a

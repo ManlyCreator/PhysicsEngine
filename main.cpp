@@ -8,8 +8,15 @@
 
 #define WIDTH 800
 #define HEIGHT 600
+#define GRAVITY 15.0f
+
+// TODO: Learn GLUT to render spheres
+// TODO: Create a scene with lighted spheres
+// TODO: Game Physics - Pg. 78
+// TODO: Consult cyclone source code to organize this project
 
 int main(void) {
+  double timeElapsed = 0.0f;
   GLFWwindow *window;
 
   if (!glfwInit()) {
@@ -43,8 +50,10 @@ int main(void) {
 
   // Particle
   AnalogPhysics::Particle particle(shader, 0.0f);
-  particle.size = glm::vec3(100.0f);
-  std::cout << particle.getInverseMass() << "\n";
+  particle.size = glm::vec3(50.0f);
+  particle.gravity = glm::vec3(0.0f, -GRAVITY, 0.0f);
+  particle.damping = 0.995f;
+  particle.SetMass(10.0f);
 
   // Projection
   glm::mat4 projection = glm::ortho((float)-WIDTH, (float)WIDTH, (float)-HEIGHT, (float)HEIGHT, -1.0f, 1.0f);
@@ -55,7 +64,10 @@ int main(void) {
 
     shader.SetMatrix4("projection", projection);
 
+    particle.Integrate(glfwGetTime() - timeElapsed);
     particle.Draw();
+
+    timeElapsed = glfwGetTime();
 
     glfwPollEvents();
     glfwSwapBuffers(window);

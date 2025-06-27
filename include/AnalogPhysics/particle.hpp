@@ -4,6 +4,7 @@
 #include <glad/glad.h>
 #include <glm/common.hpp>
 #include <shader.hpp>
+#include <ostream>
 
 typedef float real;
 
@@ -15,14 +16,21 @@ namespace AnalogPhysics {
 
     public:
       Shader shader;
-      glm::vec3 position, velocity, acceleration, size;
+      glm::vec3 position, velocity, acceleration, accumForce, gravity, size;
       real damping;
 
       Particle(Shader shader, real mass = 1.0f);
       void Draw();
-      void setMass(real newMass) { inverseMass = 1.0f/newMass; }
-      real getInverseMass() { return inverseMass; }
+      void Integrate(real delta);
+      inline void SetMass(real newMass) { inverseMass = 1.0f/newMass; }
+      inline real GetInverseMass() { return inverseMass; }
+
+      friend std::ostream &operator<<(std::ostream &out, glm::vec3 &v); 
   };
+
+  inline std::ostream &operator<<(std::ostream &out, glm::vec3 &v) {
+    return out << "< " << v.x << ", " << v.y << ", " << v.z << " >";
+  }
 }
 
 #endif

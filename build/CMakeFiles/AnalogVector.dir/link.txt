@@ -1,2 +1,0 @@
-/usr/bin/ar qc libAnalogVector.a CMakeFiles/AnalogVector.dir/src/IvVector.cpp.o
-/usr/bin/ranlib libAnalogVector.a

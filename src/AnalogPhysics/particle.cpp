@@ -1,5 +1,6 @@
 #include <AnalogPhysics/particle.hpp>
 #include <glm/ext/matrix_transform.hpp>
+#include <iostream>
 
 namespace AnalogPhysics {
   Particle::Particle(Shader shader, real mass) {
@@ -8,6 +9,7 @@ namespace AnalogPhysics {
     position = glm::vec3(0.0f);
     velocity = glm::vec3(0.0f);
     acceleration = glm::vec3(0.0f);
+    accumForce = glm::vec3(0.0f);
     size = glm::vec3(1.0f);
 
     unsigned VBO;
@@ -40,4 +42,16 @@ namespace AnalogPhysics {
     glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, 6);
   }
+
+  void Particle::Integrate(real delta) {
+    // Calculate Acceleration
+    acceleration = GetInverseMass() * accumForce + gravity;
+    // Calculate Velocity
+    velocity += acceleration * delta;
+    // Impose Drag
+    velocity *= powf(damping, delta); 
+    // Update Position
+    position += velocity * delta;
+  }
 }
+
