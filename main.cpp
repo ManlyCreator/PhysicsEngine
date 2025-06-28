@@ -10,7 +10,8 @@
 #define HEIGHT 600
 #define GRAVITY 15.0f
 
-// TODO: Learn GLUT to render spheres
+// TODO: Create a buildVertices function before passing data to OpenGL
+// TODO: Use an IBO to render the sphere
 // TODO: Create a scene with lighted spheres
 // TODO: Game Physics - Pg. 78
 // TODO: Consult cyclone source code to organize this project

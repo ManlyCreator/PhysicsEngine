@@ -96,6 +96,7 @@ PhysicsEngine: libglad.a
 PhysicsEngine: _deps/glfw-build/src/libglfw3.a
 PhysicsEngine: _deps/glm-build/glm/libglm.a
 PhysicsEngine: libShader.a
+PhysicsEngine: libSphere.a
 PhysicsEngine: libParticle.a
 PhysicsEngine: libLine.a
 PhysicsEngine: /usr/lib/x86_64-linux-gnu/librt.a

@@ -188,6 +188,19 @@ Shader/fast:
 .PHONY : Shader/fast
 
 #=============================================================================
+# Target rules for targets named Sphere
+
+# Build rule for target.
+Sphere: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Sphere
+.PHONY : Sphere
+
+# fast build rule for target.
+Sphere/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/build
+.PHONY : Sphere/fast
+
+#=============================================================================
 # Target rules for targets named Particle
 
 # Build rule for target.
@@ -326,6 +339,30 @@ src/AnalogPhysics/particle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Particle.dir/build.make CMakeFiles/Particle.dir/src/AnalogPhysics/particle.cpp.s
 .PHONY : src/AnalogPhysics/particle.cpp.s
 
+src/AnalogShapes/sphere.o: src/AnalogShapes/sphere.cpp.o
+.PHONY : src/AnalogShapes/sphere.o
+
+# target to build an object file
+src/AnalogShapes/sphere.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/src/AnalogShapes/sphere.cpp.o
+.PHONY : src/AnalogShapes/sphere.cpp.o
+
+src/AnalogShapes/sphere.i: src/AnalogShapes/sphere.cpp.i
+.PHONY : src/AnalogShapes/sphere.i
+
+# target to preprocess a source file
+src/AnalogShapes/sphere.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/src/AnalogShapes/sphere.cpp.i
+.PHONY : src/AnalogShapes/sphere.cpp.i
+
+src/AnalogShapes/sphere.s: src/AnalogShapes/sphere.cpp.s
+.PHONY : src/AnalogShapes/sphere.s
+
+# target to generate assembly for a file
+src/AnalogShapes/sphere.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/src/AnalogShapes/sphere.cpp.s
+.PHONY : src/AnalogShapes/sphere.cpp.s
+
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
 
@@ -416,6 +453,7 @@ help:
 	@echo "... Particle"
 	@echo "... PhysicsEngine"
 	@echo "... Shader"
+	@echo "... Sphere"
 	@echo "... glad"
 	@echo "... glfw"
 	@echo "... glm"
@@ -425,6 +463,9 @@ help:
 	@echo "... src/AnalogPhysics/particle.o"
 	@echo "... src/AnalogPhysics/particle.i"
 	@echo "... src/AnalogPhysics/particle.s"
+	@echo "... src/AnalogShapes/sphere.o"
+	@echo "... src/AnalogShapes/sphere.i"
+	@echo "... src/AnalogShapes/sphere.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

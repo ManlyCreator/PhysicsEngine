@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/rami/CPP_Projects/PhysicsEngine/build
 # The main recursive "all" target.
 all: CMakeFiles/PhysicsEngine.dir/all
 all: CMakeFiles/Shader.dir/all
+all: CMakeFiles/Sphere.dir/all
 all: CMakeFiles/Particle.dir/all
 all: CMakeFiles/Line.dir/all
 all: CMakeFiles/glad.dir/all
@@ -80,6 +81,7 @@ preinstall: _deps/glm-build/preinstall
 # The main recursive "clean" target.
 clean: CMakeFiles/PhysicsEngine.dir/clean
 clean: CMakeFiles/Shader.dir/clean
+clean: CMakeFiles/Sphere.dir/clean
 clean: CMakeFiles/Particle.dir/clean
 clean: CMakeFiles/Line.dir/clean
 clean: CMakeFiles/glad.dir/clean
@@ -172,6 +174,7 @@ _deps/glm-build/glm/clean: _deps/glm-build/glm/CMakeFiles/glm.dir/clean
 
 # All Build rule for target.
 CMakeFiles/PhysicsEngine.dir/all: CMakeFiles/Shader.dir/all
+CMakeFiles/PhysicsEngine.dir/all: CMakeFiles/Sphere.dir/all
 CMakeFiles/PhysicsEngine.dir/all: CMakeFiles/Particle.dir/all
 CMakeFiles/PhysicsEngine.dir/all: CMakeFiles/Line.dir/all
 CMakeFiles/PhysicsEngine.dir/all: CMakeFiles/glad.dir/all
@@ -184,7 +187,7 @@ CMakeFiles/PhysicsEngine.dir/all: _deps/glm-build/glm/CMakeFiles/glm.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PhysicsEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles 57
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles 59
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PhysicsEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles 0
 .PHONY : CMakeFiles/PhysicsEngine.dir/rule
@@ -223,6 +226,32 @@ Shader: CMakeFiles/Shader.dir/rule
 CMakeFiles/Shader.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shader.dir/build.make CMakeFiles/Shader.dir/clean
 .PHONY : CMakeFiles/Shader.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Sphere.dir
+
+# All Build rule for target.
+CMakeFiles/Sphere.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles --progress-num=9,10 "Built target Sphere"
+.PHONY : CMakeFiles/Sphere.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Sphere.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Sphere.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles 0
+.PHONY : CMakeFiles/Sphere.dir/rule
+
+# Convenience name for target.
+Sphere: CMakeFiles/Sphere.dir/rule
+.PHONY : Sphere
+
+# clean rule for target.
+CMakeFiles/Sphere.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/clean
+.PHONY : CMakeFiles/Sphere.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Particle.dir
@@ -283,7 +312,7 @@ CMakeFiles/Line.dir/clean:
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles --progress-num=9,10 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles --progress-num=11,12 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -335,7 +364,7 @@ _deps/glfw-build/CMakeFiles/uninstall.dir/clean:
 _deps/glfw-build/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/glfw-build/src/CMakeFiles/glfw.dir/build.make _deps/glfw-build/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/glfw-build/src/CMakeFiles/glfw.dir/build.make _deps/glfw-build/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57 "Built target glfw"
 .PHONY : _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
@@ -361,7 +390,7 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/clean:
 _deps/glfw-build/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/glfw-build/src/CMakeFiles/update_mappings.dir/build.make _deps/glfw-build/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/glfw-build/src/CMakeFiles/update_mappings.dir/build.make _deps/glfw-build/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles --progress-num=58 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles --progress-num=60 "Built target update_mappings"
 .PHONY : _deps/glfw-build/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.
@@ -387,7 +416,7 @@ _deps/glfw-build/src/CMakeFiles/update_mappings.dir/clean:
 _deps/glm-build/glm/CMakeFiles/glm.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/glm-build/glm/CMakeFiles/glm.dir/build.make _deps/glm-build/glm/CMakeFiles/glm.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/glm-build/glm/CMakeFiles/glm.dir/build.make _deps/glm-build/glm/CMakeFiles/glm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles --progress-num=56,57 "Built target glm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles --progress-num=58,59 "Built target glm"
 .PHONY : _deps/glm-build/glm/CMakeFiles/glm.dir/all
 
 # Build rule for subdir invocation for target.
