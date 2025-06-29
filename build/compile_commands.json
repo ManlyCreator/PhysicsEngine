@@ -7,9 +7,9 @@
 },
 {
   "directory": "/home/rami/CPP_Projects/PhysicsEngine/build",
-  "command": "/usr/bin/c++ -DNAME=\\\"PhysicsEngine\\\" -I/home/rami/CPP_Projects/PhysicsEngine/include  -o CMakeFiles/Sphere.dir/src/AnalogShapes/sphere.cpp.o -c /home/rami/CPP_Projects/PhysicsEngine/src/AnalogShapes/sphere.cpp",
-  "file": "/home/rami/CPP_Projects/PhysicsEngine/src/AnalogShapes/sphere.cpp",
-  "output": "CMakeFiles/Sphere.dir/src/AnalogShapes/sphere.cpp.o"
+  "command": "/usr/bin/c++ -DNAME=\\\"PhysicsEngine\\\" -I/home/rami/CPP_Projects/PhysicsEngine/include  -o CMakeFiles/Sphere.dir/src/AnalogPhysics/sphere.cpp.o -c /home/rami/CPP_Projects/PhysicsEngine/src/AnalogPhysics/sphere.cpp",
+  "file": "/home/rami/CPP_Projects/PhysicsEngine/src/AnalogPhysics/sphere.cpp",
+  "output": "CMakeFiles/Sphere.dir/src/AnalogPhysics/sphere.cpp.o"
 },
 {
   "directory": "/home/rami/CPP_Projects/PhysicsEngine/build",

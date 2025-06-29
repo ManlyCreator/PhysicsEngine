@@ -25,7 +25,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(glfw glm)
 
 add_library(Shader STATIC src/shader.cpp)
-add_library(Sphere STATIC src/AnalogShapes/sphere.cpp)
+add_library(Sphere STATIC src/AnalogPhysics/sphere.cpp)
 add_library(Particle STATIC src/AnalogPhysics/particle.cpp)
 add_library(Line STATIC src/line.cpp)
 add_library(glad STATIC src/glad.c)

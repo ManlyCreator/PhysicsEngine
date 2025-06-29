@@ -339,29 +339,29 @@ src/AnalogPhysics/particle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Particle.dir/build.make CMakeFiles/Particle.dir/src/AnalogPhysics/particle.cpp.s
 .PHONY : src/AnalogPhysics/particle.cpp.s
 
-src/AnalogShapes/sphere.o: src/AnalogShapes/sphere.cpp.o
-.PHONY : src/AnalogShapes/sphere.o
+src/AnalogPhysics/sphere.o: src/AnalogPhysics/sphere.cpp.o
+.PHONY : src/AnalogPhysics/sphere.o
 
 # target to build an object file
-src/AnalogShapes/sphere.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/src/AnalogShapes/sphere.cpp.o
-.PHONY : src/AnalogShapes/sphere.cpp.o
+src/AnalogPhysics/sphere.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/src/AnalogPhysics/sphere.cpp.o
+.PHONY : src/AnalogPhysics/sphere.cpp.o
 
-src/AnalogShapes/sphere.i: src/AnalogShapes/sphere.cpp.i
-.PHONY : src/AnalogShapes/sphere.i
+src/AnalogPhysics/sphere.i: src/AnalogPhysics/sphere.cpp.i
+.PHONY : src/AnalogPhysics/sphere.i
 
 # target to preprocess a source file
-src/AnalogShapes/sphere.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/src/AnalogShapes/sphere.cpp.i
-.PHONY : src/AnalogShapes/sphere.cpp.i
+src/AnalogPhysics/sphere.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/src/AnalogPhysics/sphere.cpp.i
+.PHONY : src/AnalogPhysics/sphere.cpp.i
 
-src/AnalogShapes/sphere.s: src/AnalogShapes/sphere.cpp.s
-.PHONY : src/AnalogShapes/sphere.s
+src/AnalogPhysics/sphere.s: src/AnalogPhysics/sphere.cpp.s
+.PHONY : src/AnalogPhysics/sphere.s
 
 # target to generate assembly for a file
-src/AnalogShapes/sphere.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/src/AnalogShapes/sphere.cpp.s
-.PHONY : src/AnalogShapes/sphere.cpp.s
+src/AnalogPhysics/sphere.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/src/AnalogPhysics/sphere.cpp.s
+.PHONY : src/AnalogPhysics/sphere.cpp.s
 
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
@@ -463,9 +463,9 @@ help:
 	@echo "... src/AnalogPhysics/particle.o"
 	@echo "... src/AnalogPhysics/particle.i"
 	@echo "... src/AnalogPhysics/particle.s"
-	@echo "... src/AnalogShapes/sphere.o"
-	@echo "... src/AnalogShapes/sphere.i"
-	@echo "... src/AnalogShapes/sphere.s"
+	@echo "... src/AnalogPhysics/sphere.o"
+	@echo "... src/AnalogPhysics/sphere.i"
+	@echo "... src/AnalogPhysics/sphere.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

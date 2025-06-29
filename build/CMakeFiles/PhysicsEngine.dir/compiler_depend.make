@@ -185,6 +185,7 @@ CMakeFiles/PhysicsEngine.dir/main.cpp.o: /home/rami/CPP_Projects/PhysicsEngine/m
   _deps/glm-src/glm/gtc/type_ptr.hpp \
   _deps/glm-src/glm/gtc/type_ptr.inl \
   /home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics/particle.hpp \
+  /home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics/sphere.hpp \
   /home/rami/CPP_Projects/PhysicsEngine/include/KHR/khrplatform.h \
   /home/rami/CPP_Projects/PhysicsEngine/include/glad/glad.h \
   /home/rami/CPP_Projects/PhysicsEngine/include/shader.hpp \
@@ -236,12 +237,15 @@ CMakeFiles/PhysicsEngine.dir/main.cpp.o: /home/rami/CPP_Projects/PhysicsEngine/m
   /usr/include/c++/13/bits/specfun.h \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
   /usr/include/c++/13/bits/streambuf.tcc \
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
@@ -249,6 +253,7 @@ CMakeFiles/PhysicsEngine.dir/main.cpp.o: /home/rami/CPP_Projects/PhysicsEngine/m
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cassert \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
@@ -298,6 +303,7 @@ CMakeFiles/PhysicsEngine.dir/main.cpp.o: /home/rami/CPP_Projects/PhysicsEngine/m
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -544,6 +550,8 @@ CMakeFiles/PhysicsEngine.dir/main.cpp.o: /home/rami/CPP_Projects/PhysicsEngine/m
 
 /usr/include/ctype.h:
 
+/usr/include/c++/13/vector:
+
 /usr/include/c++/13/typeinfo:
 
 /usr/include/c++/13/tr1/special_function_util.h:
@@ -596,6 +604,20 @@ CMakeFiles/PhysicsEngine.dir/main.cpp.o: /home/rami/CPP_Projects/PhysicsEngine/m
 
 /usr/include/c++/13/ext/type_traits.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/c++/13/ext/atomicity.h:
+
+/usr/include/c++/13/ext/alloc_traits.h:
+
+/usr/include/c++/13/exception:
+
+/usr/include/linux/errno.h:
+
+/usr/include/c++/13/debug/debug.h:
+
+/usr/include/c++/13/debug/assertions.h:
+
 _deps/glm-src/glm/ext/vector_uint3.hpp:
 
 _deps/glm-src/glm/ext/vector_float4_precision.hpp:
@@ -622,6 +644,8 @@ _deps/glm-src/glm/ext/vector_double2.hpp:
 
 _deps/glm-src/glm/ext/vector_bool2.hpp:
 
+/usr/include/c++/13/bits/stl_vector.h:
+
 _deps/glm-src/glm/mat3x2.hpp:
 
 _deps/glm-src/glm/detail/type_mat4x3.hpp:
@@ -637,6 +661,8 @@ _deps/glm-src/glm/ext/matrix_float3x3_precision.hpp:
 _deps/glm-src/glm/detail/type_mat3x2.hpp:
 
 _deps/glm-src/glm/ext/matrix_float3x3.hpp:
+
+/usr/include/c++/13/bits/vector.tcc:
 
 _deps/glm-src/glm/ext/matrix_float3x2_precision.hpp:
 
@@ -655,12 +681,6 @@ _deps/glm-src/glm/mat3x4.hpp:
 _deps/glm-src/glm/detail/type_mat4x4.hpp:
 
 _deps/glm-src/glm/ext/matrix_float2x3.hpp:
-
-_deps/glm-src/glm/ext/quaternion_transform.inl:
-
-_deps/glm-src/glm/ext/vector_bool4_precision.hpp:
-
-_deps/glm-src/glm/ext/matrix_double4x3.hpp:
 
 _deps/glm-src/glm/ext/matrix_double4x3_precision.hpp:
 
@@ -722,6 +742,14 @@ _deps/glm-src/glm/ext/quaternion_geometric.hpp:
 
 /usr/include/c++/13/bits/allocator.h:
 
+_deps/glm-src/glm/ext/quaternion_transform.inl:
+
+_deps/glm-src/glm/ext/vector_bool4_precision.hpp:
+
+_deps/glm-src/glm/ext/matrix_double4x3.hpp:
+
+/usr/include/c++/13/bits/stl_bvector.h:
+
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 _deps/glm-src/glm/ext/vector_float3_precision.hpp:
@@ -775,10 +803,6 @@ _deps/glm-src/glm/detail/type_mat3x4.hpp:
 /usr/include/asm-generic/errno.h:
 
 /usr/include/c++/13/cctype:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/c++/13/ext/atomicity.h:
 
 _deps/glm-src/glm/ext/vector_relational.inl:
 
@@ -847,8 +871,6 @@ _deps/glm-src/glm/detail/type_mat4x4.inl:
 /usr/include/c++/13/bits/memory_resource.h:
 
 _deps/glm-src/glm/detail/type_vec4.hpp:
-
-/usr/include/c++/13/ext/alloc_traits.h:
 
 _deps/glm-src/glm/ext/matrix_float2x4.hpp:
 
@@ -1052,8 +1074,6 @@ _deps/glm-src/glm/gtc/quaternion.hpp:
 
 _deps/glm-src/glm/gtc/quaternion.inl:
 
-_deps/glm-src/glm/gtc/vec1.hpp:
-
 _deps/glm-src/glm/gtc/type_ptr.hpp:
 
 /usr/include/stdio.h:
@@ -1067,8 +1087,6 @@ _deps/glm-src/glm/detail/type_vec3.hpp:
 _deps/glm-src/glm/ext/matrix_float4x2_precision.hpp:
 
 _deps/glm-src/glm/gtc/type_ptr.inl:
-
-/usr/include/c++/13/bits/new_allocator.h:
 
 /usr/include/c++/13/bits/uses_allocator_args.h:
 
@@ -1091,6 +1109,10 @@ _deps/glm-src/glm/detail/type_vec2.inl:
 /usr/include/c++/13/bits/stl_pair.h:
 
 /usr/include/c++/13/cstdio:
+
+_deps/glm-src/glm/gtc/vec1.hpp:
+
+/home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics/sphere.hpp:
 
 /home/rami/CPP_Projects/PhysicsEngine/include/KHR/khrplatform.h:
 
@@ -1178,6 +1200,10 @@ _deps/glm-src/glm/ext/vector_bool2_precision.hpp:
 
 /usr/include/c++/13/bits/stl_construct.h:
 
+/usr/include/c++/13/bits/new_allocator.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
+
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/c++/13/bits/streambuf_iterator.h:
@@ -1199,11 +1225,3 @@ _deps/glm-src/glm/ext/matrix_double3x4_precision.hpp:
 /usr/include/c++/13/cwchar:
 
 /usr/include/c++/13/cwctype:
-
-/usr/include/c++/13/debug/assertions.h:
-
-/usr/include/linux/errno.h:
-
-/usr/include/c++/13/debug/debug.h:
-
-/usr/include/c++/13/exception:

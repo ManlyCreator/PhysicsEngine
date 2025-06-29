@@ -156,6 +156,11 @@ CMakeFiles/PhysicsEngine.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
  /home/rami/CPP_Projects/PhysicsEngine/build/_deps/glfw-src/include/GLFW/glfw3.h \
+ /home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics/sphere.hpp \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc \
  /home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics/particle.hpp \
  /home/rami/CPP_Projects/PhysicsEngine/build/_deps/glm-src/glm/common.hpp \
  /home/rami/CPP_Projects/PhysicsEngine/build/_deps/glm-src/glm/detail/qualifier.hpp \

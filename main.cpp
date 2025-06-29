@@ -1,6 +1,7 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <AnalogPhysics/sphere.hpp>
 #include <AnalogPhysics/particle.hpp>
 #include <shader.hpp>
 #include <glm/common.hpp>
@@ -10,8 +11,7 @@
 #define HEIGHT 600
 #define GRAVITY 15.0f
 
-// TODO: Create a buildVertices function before passing data to OpenGL
-// TODO: Use an IBO to render the sphere
+// TODO: Implement drawing logic
 // TODO: Create a scene with lighted spheres
 // TODO: Game Physics - Pg. 78
 // TODO: Consult cyclone source code to organize this project
@@ -50,6 +50,7 @@ int main(void) {
   Shader shader("../shaders/vertex.glsl", "../shaders/circleFragment.glsl");
 
   // Particle
+  AnalogPhysics::Sphere s(16, 16, 10.0, shader);
   AnalogPhysics::Particle particle(shader, 0.0f);
   particle.size = glm::vec3(50.0f);
   particle.gravity = glm::vec3(0.0f, -GRAVITY, 0.0f);

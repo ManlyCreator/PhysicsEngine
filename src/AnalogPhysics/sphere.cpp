@@ -1,13 +1,52 @@
-#include <AnalogShapes/sphere.hpp>
+#include "line.hpp"
+#include <AnalogPhysics/sphere.hpp>
 #include <cmath>
+#include <iostream>
 
-namespace AnalogShapes {
-  Sphere::Sphere(int sectors, int stacks, float radius) {
-    buildVertices(sectors, stacks, radius);
-    // TODO: OpenGL Logic
+namespace AnalogPhysics {
+  Sphere::Sphere(int sectors, int stacks, float radius, Shader shader) {
+    GLuint VBO;
+
+    this->shader = shader;
+
+    BuildVertices(sectors, stacks, radius);
+
+    // VAO
+    glGenVertexArrays(1, &VAO);
+    glBindVertexArray(VAO);
+
+    // VBO
+    glGenBuffers(1, &VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, interleavedVertices.size(), interleavedVertices.data(), GL_STATIC_DRAW);
+
+    // EBO
+    glGenBuffers(1, &EBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size(), indices.data(), GL_STATIC_DRAW);
+
+    // Vertices
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 8, (void*)0);
+    glEnableVertexAttribArray(0);
+
+    // Normals
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 8, (void*)(sizeof(float) * 3));
+    glEnableVertexAttribArray(1);
+
+    // Texture
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 8, (void*)(sizeof(float) * 6));
+    glEnableVertexAttribArray(2);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
   }
 
-  void Sphere::buildVertices(int sectors, int stacks, float radius) {
+  void Sphere::Draw() {
+    shader.Use(); 
+  }
+
+  void Sphere::BuildVertices(int sectors, int stacks, float radius) {
     float x, y, z, xz;
     float sectorAngle, stackAngle;
     float sectorStep = 2*M_PI / sectors;
