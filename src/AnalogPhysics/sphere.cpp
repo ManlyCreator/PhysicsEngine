@@ -1,3 +1,4 @@
+#include "AnalogPhysics/particle.hpp"
 #include "line.hpp"
 #include <AnalogPhysics/sphere.hpp>
 #include <cmath>
@@ -18,12 +19,12 @@ namespace AnalogPhysics {
     // VBO
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, interleavedVertices.size(), interleavedVertices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, interleavedVertices.size() * sizeof(float), interleavedVertices.data(), GL_STATIC_DRAW);
 
     // EBO
     glGenBuffers(1, &EBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size(), indices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(float), indices.data(), GL_STATIC_DRAW);
 
     // Vertices
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 8, (void*)0);
@@ -34,7 +35,7 @@ namespace AnalogPhysics {
     glEnableVertexAttribArray(1);
 
     // Texture
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 8, (void*)(sizeof(float) * 6));
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 8, (void*)(sizeof(float) * 6));
     glEnableVertexAttribArray(2);
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
@@ -44,6 +45,11 @@ namespace AnalogPhysics {
 
   void Sphere::Draw() {
     shader.Use(); 
+    glm::mat4 model(1.0f);
+    model = glm::translate(model, glm::vec3(0.0f));
+    shader.SetMatrix4("model", model);
+    glBindVertexArray(VAO);
+    glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, indices.data());
   }
 
   void Sphere::BuildVertices(int sectors, int stacks, float radius) {
@@ -99,6 +105,5 @@ namespace AnalogPhysics {
         }
       }
     }
-
   }
 }

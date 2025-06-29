@@ -1,3 +1,5 @@
+#include <cmath>
+#include <glm/ext/matrix_clip_space.hpp>
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -11,7 +13,7 @@
 #define HEIGHT 600
 #define GRAVITY 15.0f
 
-// TODO: Implement drawing logic
+// TODO: Calculate the total size of sphere vectors & account for it in the drawing logic
 // TODO: Create a scene with lighted spheres
 // TODO: Game Physics - Pg. 78
 // TODO: Consult cyclone source code to organize this project
@@ -48,26 +50,33 @@ int main(void) {
 
   // Shader
   Shader shader("../shaders/vertex.glsl", "../shaders/circleFragment.glsl");
+  Shader sphereShader("../shaders/vertex.glsl", "../shaders/fragment.glsl");
 
   // Particle
-  AnalogPhysics::Sphere s(16, 16, 10.0, shader);
-  AnalogPhysics::Particle particle(shader, 0.0f);
-  particle.size = glm::vec3(50.0f);
-  particle.gravity = glm::vec3(0.0f, -GRAVITY, 0.0f);
-  particle.damping = 0.995f;
-  particle.SetMass(10.0f);
+  AnalogPhysics::Sphere s(16, 16, 1.0, sphereShader);
+  /*AnalogPhysics::Particle particle(shader, 0.0f);*/
+  /*particle.size = glm::vec3(1.0f);*/
+  /*particle.gravity = glm::vec3(0.0f, -GRAVITY, 0.0f);*/
+  /*particle.damping = 0.995f;*/
+  /*particle.SetMass(10.0f);*/
 
   // Projection
-  glm::mat4 projection = glm::ortho((float)-WIDTH, (float)WIDTH, (float)-HEIGHT, (float)HEIGHT, -1.0f, 1.0f);
+  /*glm::mat4 projection = glm::ortho((float)-WIDTH, (float)WIDTH, (float)-HEIGHT, (float)HEIGHT, -1.0f, 1.0f);*/
+  glm::mat4 projection = glm::perspective((float)M_PI/2.0f, (float)WIDTH/HEIGHT, 0.1f, 100.0f);
+  glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -10.0f));
 
   while (!glfwWindowShouldClose(window)) {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    shader.SetMatrix4("projection", projection);
+    /*shader.SetMatrix4("projection", projection);*/
+    /*shader.SetMatrix4("view", view);*/
+    sphereShader.SetMatrix4("projection", projection);
+    sphereShader.SetMatrix4("view", view);
 
-    particle.Integrate(glfwGetTime() - timeElapsed);
-    particle.Draw();
+    /*particle.Integrate(glfwGetTime() - timeElapsed);*/
+    /*particle.Draw();*/
+    s.Draw();
 
     timeElapsed = glfwGetTime();
 
