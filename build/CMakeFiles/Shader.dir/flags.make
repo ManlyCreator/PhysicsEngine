@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DNAME=\"PhysicsEngine\"
 
-CXX_INCLUDES = -I/home/rami/CPP_Projects/PhysicsEngine/include
+CXX_INCLUDES = -I/home/rami/CPP_Projects/PhysicsEngine/include -I/home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics
 
 CXX_FLAGS = 
 

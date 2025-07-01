@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DHAVE_MEMFD_CREATE -DNAME=\"PhysicsEngine\" -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
 
-C_INCLUDES = -I/home/rami/CPP_Projects/PhysicsEngine/include -I/home/rami/CPP_Projects/PhysicsEngine/build/_deps/glfw-src/include -I/home/rami/CPP_Projects/PhysicsEngine/build/_deps/glfw-src/src -I/home/rami/CPP_Projects/PhysicsEngine/build/_deps/glfw-build/src
+C_INCLUDES = -I/home/rami/CPP_Projects/PhysicsEngine/include -I/home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics -I/home/rami/CPP_Projects/PhysicsEngine/build/_deps/glfw-src/include -I/home/rami/CPP_Projects/PhysicsEngine/build/_deps/glfw-src/src -I/home/rami/CPP_Projects/PhysicsEngine/build/_deps/glfw-build/src
 
 C_FLAGS = -std=c99 -fPIC -Wall
 

@@ -5,23 +5,23 @@
 #include <glm/common.hpp>
 #include <shader.hpp>
 #include <ostream>
+#include <shape.hpp>
 
 typedef float real;
 
 namespace AnalogPhysics {
   class Particle {
     private:
-      GLuint VAO;
       real inverseMass;
+      Shape shape;
 
     public:
-      Shader shader;
       glm::vec3 position, velocity, acceleration, accumForce, gravity, size;
       real damping;
 
-      Particle(Shader shader, real mass = 1.0f);
-      void Draw();
+      Particle(Shape shape, real mass = 1.0f);
       void Integrate(real delta);
+      void Render();
       inline void SetMass(real newMass) { inverseMass = 1.0f/newMass; }
       inline real GetInverseMass() { return inverseMass; }
 

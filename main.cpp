@@ -13,7 +13,7 @@
 #define HEIGHT 600
 #define GRAVITY 15.0f
 
-// TODO: Create a scene with lighted spheres
+// TODO: Create a scene with lighted spheres (LearnOpenGL)
 // TODO: Game Physics - Pg. 78
 // TODO: Consult cyclone source code to organize this project
 
@@ -52,7 +52,7 @@ int main(void) {
 
   // Particle
   AnalogPhysics::Sphere s(16, 16, 1.0, shader);
-  AnalogPhysics::Particle particle(shader, 0.0f);
+  AnalogPhysics::Particle particle(s, 0.0f);
   particle.size = glm::vec3(1.0f);
   particle.gravity = glm::vec3(0.0f, -GRAVITY, 0.0f);
   particle.damping = 0.995f;
@@ -71,8 +71,7 @@ int main(void) {
     shader.SetMatrix4("view", view);
 
     particle.Integrate(glfwGetTime() - timeElapsed);
-    particle.Draw();
-    s.Draw();
+    particle.Render();
 
     timeElapsed = glfwGetTime();
 

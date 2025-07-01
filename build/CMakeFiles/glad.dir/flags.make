@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DNAME=\"PhysicsEngine\"
 
-C_INCLUDES = -I/home/rami/CPP_Projects/PhysicsEngine/include
+C_INCLUDES = -I/home/rami/CPP_Projects/PhysicsEngine/include -I/home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics
 
 C_FLAGS = 
 

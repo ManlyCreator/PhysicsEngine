@@ -7,7 +7,7 @@
 
 class Shader {
   private:
-    unsigned ID;
+    GLuint ID;
     bool CheckCompileStatus(GLuint shader, GLenum shaderType);
     bool CheckLinkStatus();
 
@@ -15,6 +15,7 @@ class Shader {
     Shader() { };
     Shader(const char *vertexShader, const char *fragmentShader);
     void Use() { glUseProgram(ID); };
+    GLuint GetID() { return ID; };
     void SetInt(const char *name, int value) { glUniform1i(glGetUniformLocation(ID, name), value); };
     void SetBool(const char *name, int value) { glUniform1i(glGetUniformLocation(ID, name), value); };
     void SetFloat(const char *name, float value) { glUniform1f(glGetUniformLocation(ID, name), value); };

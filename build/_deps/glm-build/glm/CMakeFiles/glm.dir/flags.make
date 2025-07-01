@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DNAME=\"PhysicsEngine\"
 
-CXX_INCLUDES = -I/home/rami/CPP_Projects/PhysicsEngine/include -I/home/rami/CPP_Projects/PhysicsEngine/build/_deps/glm-src
+CXX_INCLUDES = -I/home/rami/CPP_Projects/PhysicsEngine/include -I/home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics -I/home/rami/CPP_Projects/PhysicsEngine/build/_deps/glm-src
 
 CXX_FLAGS = 
 

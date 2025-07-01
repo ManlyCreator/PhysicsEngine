@@ -10,7 +10,7 @@ add_compile_definitions(NAME="${PROJECT_NAME}")
 
 add_executable(${PROJECT_NAME} main.cpp)
 
-include_directories(include/)
+include_directories(include/ include/AnalogPhysics/)
 
 FetchContent_Declare(
   glfw
