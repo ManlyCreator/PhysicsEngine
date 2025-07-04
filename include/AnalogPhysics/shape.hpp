@@ -25,12 +25,6 @@ namespace AnalogPhysics {
         glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, (void*)0);
         glBindVertexArray(0);
       }
-
-      virtual void SetLight(glm::vec3 lightPos, glm::vec3 lightCol) {
-        shader.Use();
-        shader.SetVector3("lightPos", lightPos);
-        shader.SetVector3("lightCol", lightCol);
-      }
   };
 }
 

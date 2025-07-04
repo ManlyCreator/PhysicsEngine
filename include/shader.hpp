@@ -25,6 +25,11 @@ class Shader {
     void SetMatrix4(const char *name, glm::mat4 value) { 
       glUniformMatrix4fv(glGetUniformLocation(ID, name), 1, GL_FALSE, glm::value_ptr(value)); 
     };
+    void SetLight(glm::vec3 pos, glm::vec3 col) {
+      Use();
+      SetVector3("lightPos", pos);
+      SetVector3("lightCol", col);
+    }
 };
 
 #endif

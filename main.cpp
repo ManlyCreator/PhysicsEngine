@@ -11,9 +11,9 @@
 
 #define WIDTH 800
 #define HEIGHT 600
-#define GRAVITY 9.08f
+#define GRAVITY 0.1f
 
-// TODO: Consolidate lighting functions into Shader methods
+// TODO: Camera Class
 // TODO: Game Physics - Pg. 78
 // TODO: Consolidate demos into separate source files that can be loaded through function calls
 
@@ -59,7 +59,8 @@ int main(void) {
   lightSphere.position = glm::vec3(-5.0f, 5.0f, 5.0f);
 
   sphere.color = glm::vec3(1.0f, 0.5f, 0.31f);
-  sphere.SetLight(lightSphere.position, lightSphere.color);
+
+  shader.SetLight(lightSphere.position, lightSphere.color);
 
   AnalogPhysics::Particle particle(sphere, 0.0f);
   particle.size = glm::vec3(1.0f);
