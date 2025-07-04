@@ -24,7 +24,7 @@ void main(void) {
   // Specular
   float specularStrength = 0.5f;
   int shininess = 16;
-  vec3 reflectDir = reflect(lightDir, norm);
+  vec3 reflectDir = reflect(-lightDir, norm);
   vec3 viewDir = normalize(viewPos - fragPos);
   vec3 specular = pow(max(dot(reflectDir, viewDir), 0.0f), shininess) * specularStrength * lightCol;
 

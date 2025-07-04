@@ -11,7 +11,7 @@
 
 #define WIDTH 800
 #define HEIGHT 600
-#define GRAVITY 0.1f
+#define GRAVITY 1.0f
 
 // TODO: Camera Class
 // TODO: Game Physics - Pg. 78
@@ -70,8 +70,8 @@ int main(void) {
 
   // Shader Matrices
   glm::mat4 projection = glm::perspective((float)M_PI/4.0f, (float)WIDTH/HEIGHT, 0.1f, 100.0f);
-  glm::vec3 cameraPos(0.0f, 0.0f, -20.0f);
-  glm::mat4 view = glm::translate(glm::mat4(1.0f), cameraPos);
+  glm::vec3 cameraPos(0.0f, 0.0f, 20.0f);
+  glm::mat4 view = glm::lookAt(cameraPos, particle.position, glm::vec3(0.0f, 1.0f, 0.0f));
 
   while (!glfwWindowShouldClose(window)) {
     glEnable(GL_DEPTH_TEST);
@@ -80,6 +80,7 @@ int main(void) {
 
     shader.Use();
     shader.SetMatrix4("projection", projection);
+    view = glm::lookAt(cameraPos, particle.position, glm::vec3(0.0f, 1.0f, 0.0f));
     shader.SetMatrix4("view", view);
     shader.SetVector3("viewPos", cameraPos);
     lightShader.Use();

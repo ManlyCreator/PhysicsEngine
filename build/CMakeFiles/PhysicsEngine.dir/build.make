@@ -99,6 +99,7 @@ PhysicsEngine: libShader.a
 PhysicsEngine: libSphere.a
 PhysicsEngine: libParticle.a
 PhysicsEngine: libLine.a
+PhysicsEngine: libCamera.a
 PhysicsEngine: /usr/lib/x86_64-linux-gnu/librt.a
 PhysicsEngine: /usr/lib/x86_64-linux-gnu/libm.so
 PhysicsEngine: CMakeFiles/PhysicsEngine.dir/link.txt
