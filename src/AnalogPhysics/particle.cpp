@@ -23,9 +23,8 @@ namespace AnalogPhysics {
   }
 
   void Particle::Render() {
-    glm::mat4 model(1.0f);
-    model = glm::translate(model, position);
-    shape.Draw(model);
+    shape.position = position;
+    shape.Draw();
   }
 }
 

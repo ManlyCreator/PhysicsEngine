@@ -5,8 +5,12 @@ namespace AnalogPhysics {
   Sphere::Sphere(int sectors, int stacks, float radius, Shader shader) {
     GLuint VBO;
 
+    /** Sphere Properties **/
     this->shader = shader;
+    position = glm::vec3(0.0f);
+    color = glm::vec3(1.0f);
 
+    /** OpenGL Settings **/
     BuildVertices(sectors, stacks, radius);
 
     // VAO
