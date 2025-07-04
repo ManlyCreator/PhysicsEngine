@@ -227,19 +227,6 @@ Line/fast:
 .PHONY : Line/fast
 
 #=============================================================================
-# Target rules for targets named Camera
-
-# Build rule for target.
-Camera: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Camera
-.PHONY : Camera
-
-# fast build rule for target.
-Camera/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Camera.dir/build.make CMakeFiles/Camera.dir/build
-.PHONY : Camera/fast
-
-#=============================================================================
 # Target rules for targets named glad
 
 # Build rule for target.
@@ -376,30 +363,6 @@ src/AnalogPhysics/sphere.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sphere.dir/build.make CMakeFiles/Sphere.dir/src/AnalogPhysics/sphere.cpp.s
 .PHONY : src/AnalogPhysics/sphere.cpp.s
 
-src/camera.o: src/camera.cpp.o
-.PHONY : src/camera.o
-
-# target to build an object file
-src/camera.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Camera.dir/build.make CMakeFiles/Camera.dir/src/camera.cpp.o
-.PHONY : src/camera.cpp.o
-
-src/camera.i: src/camera.cpp.i
-.PHONY : src/camera.i
-
-# target to preprocess a source file
-src/camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Camera.dir/build.make CMakeFiles/Camera.dir/src/camera.cpp.i
-.PHONY : src/camera.cpp.i
-
-src/camera.s: src/camera.cpp.s
-.PHONY : src/camera.s
-
-# target to generate assembly for a file
-src/camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Camera.dir/build.make CMakeFiles/Camera.dir/src/camera.cpp.s
-.PHONY : src/camera.cpp.s
-
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
 
@@ -486,7 +449,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... uninstall"
 	@echo "... update_mappings"
-	@echo "... Camera"
 	@echo "... Line"
 	@echo "... Particle"
 	@echo "... PhysicsEngine"
@@ -504,9 +466,6 @@ help:
 	@echo "... src/AnalogPhysics/sphere.o"
 	@echo "... src/AnalogPhysics/sphere.i"
 	@echo "... src/AnalogPhysics/sphere.s"
-	@echo "... src/camera.o"
-	@echo "... src/camera.i"
-	@echo "... src/camera.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

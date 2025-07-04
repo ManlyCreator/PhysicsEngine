@@ -25,12 +25,6 @@
 },
 {
   "directory": "/home/rami/CPP_Projects/PhysicsEngine/build",
-  "command": "/usr/bin/c++ -DNAME=\\\"PhysicsEngine\\\" -I/home/rami/CPP_Projects/PhysicsEngine/include -I/home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics  -o CMakeFiles/Camera.dir/src/camera.cpp.o -c /home/rami/CPP_Projects/PhysicsEngine/src/camera.cpp",
-  "file": "/home/rami/CPP_Projects/PhysicsEngine/src/camera.cpp",
-  "output": "CMakeFiles/Camera.dir/src/camera.cpp.o"
-},
-{
-  "directory": "/home/rami/CPP_Projects/PhysicsEngine/build",
   "command": "/usr/bin/cc -DNAME=\\\"PhysicsEngine\\\" -I/home/rami/CPP_Projects/PhysicsEngine/include -I/home/rami/CPP_Projects/PhysicsEngine/include/AnalogPhysics  -o CMakeFiles/glad.dir/src/glad.c.o -c /home/rami/CPP_Projects/PhysicsEngine/src/glad.c",
   "file": "/home/rami/CPP_Projects/PhysicsEngine/src/glad.c",
   "output": "CMakeFiles/glad.dir/src/glad.c.o"

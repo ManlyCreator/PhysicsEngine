@@ -92,7 +92,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Sphere.dir/DependInfo.cmake"
   "CMakeFiles/Particle.dir/DependInfo.cmake"
   "CMakeFiles/Line.dir/DependInfo.cmake"
-  "CMakeFiles/Camera.dir/DependInfo.cmake"
   "CMakeFiles/glad.dir/DependInfo.cmake"
   "_deps/glfw-build/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "_deps/glfw-build/src/CMakeFiles/glfw.dir/DependInfo.cmake"

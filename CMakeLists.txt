@@ -28,7 +28,6 @@ add_library(Shader STATIC src/shader.cpp)
 add_library(Sphere STATIC src/AnalogPhysics/sphere.cpp)
 add_library(Particle STATIC src/AnalogPhysics/particle.cpp)
 add_library(Line STATIC src/line.cpp)
-add_library(Camera STATIC src/camera.cpp)
 add_library(glad STATIC src/glad.c)
 
-target_link_libraries(${PROJECT_NAME} glad glfw glm Shader Sphere Particle Line Camera)
+target_link_libraries(${PROJECT_NAME} glad glfw glm Shader Sphere Particle Line)

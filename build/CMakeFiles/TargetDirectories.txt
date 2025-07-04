@@ -3,7 +3,6 @@
 /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles/Sphere.dir
 /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles/Particle.dir
 /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles/Line.dir
-/home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles/Camera.dir
 /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles/glad.dir
 /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles/edit_cache.dir
 /home/rami/CPP_Projects/PhysicsEngine/build/CMakeFiles/rebuild_cache.dir
